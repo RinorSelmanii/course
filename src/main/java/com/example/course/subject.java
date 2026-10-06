@@ -2,6 +2,7 @@ package com.example.course;
 
 import java.util.Objects;
 
+//The class that we need to store subjects.
 public class subject {
 
     private int id;
