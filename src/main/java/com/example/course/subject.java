@@ -1,5 +1,7 @@
 package com.example.course;
 
+import java.util.Objects;
+
 public class subject {
 
     private int id;
@@ -8,7 +10,7 @@ public class subject {
     private int credits;
 
     public subject(){
-        
+
     }
 
     public subject(int id ,String name, String professor, int credits){
@@ -43,4 +45,13 @@ public class subject {
     public void setCredits(int credits){
         this.credits = credits;
     }
+
+        public boolean equals(Object obj){
+            
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
+        subject subject = (subject) obj;
+        return this.id == subject.id && Objects.equals(this.name, subject.name);
+        }
 }
