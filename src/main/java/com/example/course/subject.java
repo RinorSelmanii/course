@@ -2,9 +2,15 @@ package com.example.course;
 
 import java.util.Objects;
 
+import jakarta.persistence.Id;
+
+import jakarta.persistence.Entity;
+
 //The class that we need to store subjects.
+@Entity 
 public class subject {
 
+    @Id 
     private int id;
     private String name;
     private String professor;
