@@ -1,0 +1,8 @@
+POST http://localhost:8080/api/subjects
+Content-Type: application/json
+
+{
+    "credits":6,
+    "name":"math",
+    "professor":"Albert"
+}

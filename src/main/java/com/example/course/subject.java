@@ -2,63 +2,66 @@ package com.example.course;
 
 import java.util.Objects;
 
-import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonGetter;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
+import jakarta.persistence.Id;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 
 //The class that we need to store subjects.
 @Entity 
 public class subject {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+     private Integer id;
 
-    @Id 
-    private int id;
-    private String name;
-    private String professor;
-    private int credits;
+     @Column(name = "name")
+     private String name;
+
+     @Column(name = "professor")
+     private String professor;
+
+     @Column(name = "credits")
+     private Integer credits;
 
     public subject(){
 
     }
-
-    public subject(int id ,String name, String professor, int credits){
+  
+    public subject(Integer id ,String name, String professor, Integer credits){
         this.id = id;
         this.name = name;
         this.professor = professor;
         this.credits = credits;
     }
 
-    public int getId(){
-        return id;
+     
+    public Integer getId(){
+        return this.id;
     }
     public String getName(){
-        return name;
+        return this.name;
     }
-    public String getProffesor(){
-        return professor;
+    public String getProfessor(){
+        return this.professor;
     }
-    public int getCredits(){
-        return credits;
+    public Integer getCredits(){
+        return this.credits;
     }
 
-    public void setId(int id){
-        this.id = id;
-    }
     public void setName(String name){
         this.name = name;
     }
-    public void setProffesor(String professor){
+    public void setProfessor(String professor){
         this.professor = professor;
     }
-    public void setCredits(int credits){
+    public void setCredits(Integer credits){
         this.credits = credits;
     }
 
-        public boolean equals(Object obj){
-            
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        subject subject = (subject) obj;
-        return this.id == subject.id && Objects.equals(this.name, subject.name);
-        }
+        
 }
