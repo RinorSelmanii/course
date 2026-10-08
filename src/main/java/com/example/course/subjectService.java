@@ -18,5 +18,13 @@ public class subjectService {
     public subject insertSubject(@RequestBody subject subject){
         return subjectRepository.save(subject);
     }
+
+    public void deleteSubject(Integer id){
+
+        if(subjectRepository.existsById(id)){
+            subjectRepository.deleteById(id);
+        }
+
+    }
     
 }
