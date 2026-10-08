@@ -14,3 +14,16 @@ DELETE http://localhost:8080/api/subjects/5
 ###
 PUT http://localhost:8080/api/subjects/1/professor?professor=Shperblim
 
+###
+GET http://localhost:8080/api/subjects
+
+###
+GET http://localhost:8080/api/students
+
+###
+POST http://localhost:8080/api/students
+Content-Type: application/json
+
+{
+    "name": "Leart"
+}
