@@ -32,7 +32,7 @@ public class subjectController {
     public subject addSubject(@RequestBody subject subject){
        return subjectService.insertSubject(subject);
     }
-
+ 
     @DeleteMapping("{id}") 
     public String deleteSubject(@PathVariable Integer id){
         subjectService.deleteSubject(id);
