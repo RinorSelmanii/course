@@ -2,7 +2,15 @@ POST http://localhost:8080/api/subjects
 Content-Type: application/json
 
 {
-    "credits":6,
-    "name":"math",
-    "professor":"Albert"
+    "credits":5,
+    "name":"Algorithms",
+    "professor":"Angelina"
 }
+
+###
+
+DELETE http://localhost:8080/api/subjects/5
+
+###
+PUT http://localhost:8080/api/subjects/1/professor?professor=Shperblim
+
