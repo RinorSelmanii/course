@@ -1,10 +1,5 @@
 package com.example.course;
-
-import java.util.Objects;
-
-import com.fasterxml.jackson.annotation.JsonGetter;
-import com.fasterxml.jackson.annotation.JsonSetter;
-
+ 
 import jakarta.persistence.Id;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,6 +22,7 @@ public class subject {
 
      @Column(name = "credits")
      private Integer credits;
+
 
     public subject(){
 
