@@ -25,5 +25,8 @@ POST http://localhost:8080/api/students
 Content-Type: application/json
 
 {
-    "name": "Leart"
+    "name": "Albert"
 }
+
+###
+GET http://localhost:8080/data
