@@ -23,6 +23,13 @@ public class StudentService {
             return StudentRepository.save(student);
 
         }
+
+        //Metoda Delete
+        public void deleteStudent(Integer id){
+            if(StudentRepository.existsById(id)){
+                StudentRepository.deleteById(id);
+            }
+        }
         
     
 } 
