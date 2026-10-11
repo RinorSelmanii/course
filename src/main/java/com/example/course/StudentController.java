@@ -5,8 +5,10 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -38,5 +40,11 @@ public class StudentController {
             StudentService.deleteStudent(id);
             return "Deleted Student with id " + id;
         }
+
+        @PutMapping ("/{id}/studentName")
+        public Student updateStudent(@PathVariable Integer id, @RequestParam  String name){
+            return StudentService.updateStudent(id, name);
+        }
+
     
 }
