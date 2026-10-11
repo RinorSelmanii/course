@@ -12,7 +12,13 @@ Content-Type: application/json
 DELETE http://localhost:8080/api/subjects/5
 
 ###
+DELETE http://localhost:8080/api/students/2
+
+###
 PUT http://localhost:8080/api/subjects/1/professor?professor=Shperblim
+
+###
+PUT http://localhost:8080/api/students/4/studentName?name=Ali
 
 ###
 GET http://localhost:8080/api/subjects
