@@ -8,7 +8,7 @@ REST API using Java Spring-boot that manages two entities subject and Student wi
 -And for the db used MySql.
 
 The subject entity supports CRUD operations(GET ,POST ,PUT ,DELETE), as Student supports only (GET, Post).
-After i finished with the 2 entities i created a DoubleController.java that returns data from both entities with a single response , for that i needed to use Lists that store the results from the methods they call and HashMap to store both lists , each that contains a specifik KEY.
+After i finished with the 2 entities i created a DoubleController.java that returns data from both entities with a single response , for that i needed to use Object Lists that store the results from the Service methods that each calls and HashMap to store both lists , each that contains a specifik KEY.
 
 ## Features
 -CRUD operations
@@ -18,9 +18,9 @@ After i finished with the 2 entities i created a DoubleController.java that retu
 -Http request handling
 
 ## Tech stack
-Programming language Java
-Framework spring-boot
-Database MySql
+-Programming language Java
+-Framework spring-boot
+-Database MySql
 
 ## CRUD Operations
 -GET to Retrive Data from Student ,Subject or Both with one response.
