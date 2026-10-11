@@ -30,6 +30,17 @@ public class StudentService {
                 StudentRepository.deleteById(id);
             }
         }
+
+        //Metoda Update
+        public Student updateStudent(Integer id , String name){
+
+            Student Student = StudentRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Student not found"));
+            
+            Student.setName(name);
+            return StudentRepository.save(Student);
+            
+        }
         
     
 } 
